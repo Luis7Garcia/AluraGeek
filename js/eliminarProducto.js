@@ -2,7 +2,7 @@ import { conexionAPI } from "./conexionAPI.js";
 
 async function eliminarProducto(id){
     await conexionAPI.borrarProducto(id);
-    window.location.href = "../index.html";
+    
 }
 
 window.addEventListener("click", function (){

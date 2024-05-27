@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="img/ico.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+
+</head>
+<body>
+    <header >
+        
+        <nav class="encabezado">
+            <a class="inicio" href="./index.html">Mis Productos</a>
+
+            <img class="logo" src="./img/Logo.png" alt="">
+
+
+            <a class="agregar" href="./pages/formulario-producto.html">Agregar Producto</a>
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>MIS PRODUCTOS: </h2>
+        <section class="container__productos" data-lista>
+            <div class="producto">
+                <img class="imagen__producto" src="./img/motorcycle-g3876d6010_640.png" alt="moto de juguete color rojo">
+                <div class="descripcion__producto">
+                    <h3 class="nombre">mini moto deportiva</h3>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i> 100.000</p>
+                   <button class="icono" data-id="${id}"> <i class="fa-solid fa-trash"></i></button>
+
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="imagen__producto" src="https://media.istockphoto.com/id/1248269650/es/foto/primer-plano-de-la-moto-de-moto-de-juguete.jpg?s=1024x1024&w=is&k=20&c=4dwl1GOLHkogN8elcmPrtny7I7qGUfZKGB3FBLFXO1Y=" alt="moto de juguete color rojo">
+                <div class="descripcion__producto">
+                    <h3 class="nombre">mini moto carretera</h3>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i> 80.000</p>
+                    <button class="icono"> <i class="fa-solid fa-trash"></i></button>
+
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img class="imagen__producto" src="https://images.pexels.com/photos/20324744/pexels-photo-20324744/free-photo-of-vehiculo-avion-aterrizaje-aterrando.jpeg" alt="moto de juguete color rojo">
+                <div class="descripcion__producto">
+                    <h3 class="nombre">cuadro de paisaje con avión</h3>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i> 150.000</p>
+                    <button class="icono"> <i class="fa-solid fa-trash"></i></button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <img src="./img/Logo.png" alt="logo con corazones y palabra alurageek">
+        <h3>Desarrollado por Luis Fernando Henao Garcia</h3>
+        <p>ALURA LATAM - 2024</p>
+    </footer>
+
+    <script src="./js/mostrarProductos.js" type="module"></script>
+    <script src="./js/eliminarProducto.js" type="module"></script>
+</body>
+</html>

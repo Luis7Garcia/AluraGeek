@@ -1,12 +1,12 @@
 async function listarProductos() {
-    const conexion = await fetch("http://localhost:3001/productos");
+    const conexion = await fetch("https://my-json-server.typicode.com/Luis7Garcia/api-alurageek/productos");
 
     const conexionConvertida = await conexion.json();
     return conexionConvertida
 }
 
 async function enviarProducto(nombre, precio, imagen){
-    const conexion = await fetch("http://localhost:3001/productos", {
+    const conexion = await fetch("https://my-json-server.typicode.com/Luis7Garcia/api-alurageek/productos", {
         method: "POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify({
@@ -15,7 +15,7 @@ async function enviarProducto(nombre, precio, imagen){
             imagen:imagen
         })
     })
-    const conexionConvertida = conexion.json();
+    const conexionConvertida = await conexion.json();
 
     if(!conexion.ok){
         throw new Error("Ha ocurrido un error al enviar el producto");
@@ -26,9 +26,10 @@ async function enviarProducto(nombre, precio, imagen){
 
  async function borrarProducto(id){
     try{
-        const respuesta = await fetch(`${"http://localhost:3001/productos"}/${id}`,{
+        const respuesta = await fetch(`${"https://my-json-server.typicode.com/Luis7Garcia/api-alurageek/productos"}/${id}`,{
             method: "DELETE",
-            headers: {"content-type":"application/json"}
+            headers: {"content-type":"application/json"},
+            console: console.log("eliminado")
         });
 
         if(!respuesta.ok){
